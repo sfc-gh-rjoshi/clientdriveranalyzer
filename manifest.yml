@@ -1,0 +1,17 @@
+manifest_version: 1
+version:
+  name: SNOWCLIENTANALYZER
+  label: "v0.5"
+  comment: "Snowflake Client Driver Analyzer"
+
+artifacts:
+  setup_script: scripts/setup.sql
+  readme: readme.md
+  default_streamlit: app.SnowClientDriverAnanlyzer
+  extension_code: true
+
+privileges:
+  - IMPORTED PRIVILEGES ON SNOWFLAKE DB:
+      description: "We need imported privileges for SNOWFLAKE DB"
+  - EXECUTE TASK:
+      description: "We need to create a Task"
